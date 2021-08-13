@@ -1,17 +1,14 @@
 <template>
   <div class="hello">
-    <h1>Cat Images</h1>
-    <img v-if="image" :src=" image "> 
+    <img v-if="images" :src=" images "> 
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CatImage',
-  data() {
-    return {
-      image: "https://placekitten.com/200/300"
-    }
+  name: 'DefaultImages',
+  props: {
+    images: String,
   }
 }
 </script>

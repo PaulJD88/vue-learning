@@ -5,22 +5,27 @@
     <HelloWorld subtitle="Monkey" msg="Welcome Paul Dixon"/>
     <h1> Nest </h1>
     <HelloWorld msg="Welcome Tom"/>
+    <HelloWorld subtitle="Practice"/>
     <ShoppingList />
-    <CatImages />
+    <HelloWorld msg="Cat Images"/>
+    <DefaultImages images="https://placekitten.com/200/140/"/>
+    <ListImages />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import ShoppingList from './components/ShoppingList.vue'
-import CatImages from './components/CatImages.vue'
+import DefaultImages from './components/DefaultImages.vue'
+import ListImages from './components/ListImages.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     ShoppingList,
-    CatImages
+    DefaultImages,
+    ListImages
   }
 }
 </script>
