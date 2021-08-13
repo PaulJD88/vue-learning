@@ -6,18 +6,21 @@
     <h1> Nest </h1>
     <HelloWorld msg="Welcome Tom"/>
     <ShoppingList />
+    <CatImages />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import ShoppingList from './components/ShoppingList.vue'
+import CatImages from './components/CatImages.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    ShoppingList
+    ShoppingList,
+    CatImages
   }
 }
 </script>
