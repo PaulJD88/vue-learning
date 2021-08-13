@@ -3,6 +3,7 @@
     <h1>Picture List</h1>
     <ul>
       <li v-for="listImage in listed" :key="listImage">{{listImage}}</li>
+      <img v-if="listed" :src=" listed ">
     </ul>
   </div>
 </template>
@@ -20,6 +21,6 @@ export default {
 
 <style scoped>
 ul {
-color: red;
+color: purple;
 }
 </style>

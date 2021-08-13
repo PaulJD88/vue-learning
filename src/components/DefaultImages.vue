@@ -18,13 +18,14 @@ export default {
 
 <style scoped>
 .container {
+  border: dotted black;
   position: relative;
-  width: 50%;
+  width: 100%;
 }
 
 img {
   display: block;
-  width: 50%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
 }
@@ -35,7 +36,7 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 50%;
+  width: 100%;
   height: auto;
   opacity: 0;
   transition: .8s ease;
