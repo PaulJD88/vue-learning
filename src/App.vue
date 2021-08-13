@@ -9,6 +9,7 @@
     <ShoppingList />
     <HelloWorld msg="Cat Images"/>
     <DefaultImages images="https://placekitten.com/200/140/"/>
+    <DefaultImages images="https://placekitten.com/408/287" />
     <ListImages />
   </div>
 </template>

@@ -1,7 +1,10 @@
 <template>
-  <div class="hello">
+  <div class="container">
     <img v-if="images" :src=" images "> 
+  <div class="overlay">
+    <div class="text">A Cat</div>
   </div>
+</div>
 </template>
 
 <script>
@@ -14,11 +17,43 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  position: relative;
+  width: 50%;
+}
+
 img {
-border: 1px solid black;
-border-radius: 8px;
-padding: 5px;
-max-width: 100%;
-height: auto;
+  display: block;
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: auto;
+  opacity: 0;
+  transition: .8s ease;
+  background-color: #008CBA;
+  border-radius: 10px;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 </style>
