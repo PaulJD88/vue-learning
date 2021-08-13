@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>Cat Images</h1>
-    <img> v-for="image" {{image}} <img>
+    <img v-if="image">- {{ image }} - <img>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
   name: 'CatImage',
   data() {
     return {
-      image: "src=https://placekitten.com/200/300"
+      image: src=("https://placekitten.com/200/300")
     }
   }
 }
