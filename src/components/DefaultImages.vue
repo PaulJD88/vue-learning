@@ -18,9 +18,9 @@ export default {
 
 <style scoped>
 .container {
-  border: dotted black;
   position: relative;
-  width: 100%;
+  width: 50%;
+  height: auto;
 }
 
 img {

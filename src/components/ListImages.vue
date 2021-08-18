@@ -1,10 +1,8 @@
 <template>
   <div class="hello">
     <h1>Picture List</h1>
-    <ul>
-      <li v-for="listImage in listed" :key="listImage">{{listImage}}</li>
-      <img v-if="listed" :src=" listed ">
-    </ul>
+    <img v-for="image in images" :key="image" :src="image">
+    <img v-for="x in images" :key="x" :src="x">
   </div>
 </template>
 
@@ -13,7 +11,7 @@ export default {
   name: 'ListImages',
   data() {
     return {
-      listed: ["https://placekitten.com/408/287", "https://placekitten.com/200/139", "https://placekitten.com/200/287"]
+      images: ["https://placekitten.com/408/286", "https://placekitten.com/200/139", "https://placekitten.com/200/287"]
     }
   }
 }

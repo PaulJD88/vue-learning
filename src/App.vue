@@ -11,6 +11,7 @@
     <DefaultImages images="https://placekitten.com/200/140/"/>
     <DefaultImages images="https://placekitten.com/408/287" />
     <ListImages />
+    <FootyScores />
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import ShoppingList from './components/ShoppingList.vue'
 import DefaultImages from './components/DefaultImages.vue'
 import ListImages from './components/ListImages.vue'
+import FootyScores from './components/FootyScores.vue'
 
 export default {
   name: 'App',
@@ -26,15 +28,15 @@ export default {
     HelloWorld,
     ShoppingList,
     DefaultImages,
-    ListImages
+    ListImages,
+    FootyScores
   }
 }
 </script>
 
 <style>
 #app {
-  border: dotted blue;
-  display: block;
+  display: flexbox;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
