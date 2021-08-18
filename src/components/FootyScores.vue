@@ -2,7 +2,12 @@
   <div class="hello">
     <h1>Footy Scores</h1>
     <button @click="getScores">Get Scores</button>
-    <img v-for="team in teams" :key="team.team.id" :src="team.venue.image">
+    <div v-for="team in teams" :key="team.team.id">
+      <h4>{{team.team.name}}</h4>
+      <img :src="team.venue.image">
+      <img :src="team.team.logo">
+      <subtitle> Capacity - {{team.venue.capacity}} - </subtitle>
+    </div>
   </div>
 </template>
 
