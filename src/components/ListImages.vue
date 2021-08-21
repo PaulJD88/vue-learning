@@ -11,7 +11,11 @@ export default {
   name: 'ListImages',
   data() {
     return {
-      images: ["https://placekitten.com/408/286", "https://placekitten.com/200/139", "https://placekitten.com/200/287"]
+      images: [
+        "https://placekitten.com/408/286", 
+        "https://placekitten.com/200/139", 
+        "https://placekitten.com/200/287"
+      ]
     }
   }
 }
