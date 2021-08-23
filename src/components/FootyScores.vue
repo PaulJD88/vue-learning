@@ -6,7 +6,7 @@
       <div class="logoName">
         <img class="logo" :src="team.team.logo" />
         <h2>{{ team.team.name }}</h2>
-        <h5>Founded - {{ team.team.founded }}</h5>
+        <h5>Founded - {{ team.team.founded }} </h5>
       </div>
       <div class="imageContainer">
         <img class="venue" :src="team.venue.image" />
@@ -61,24 +61,35 @@ export default {
 .teamcard {
   display: flex;
   flex-direction: column;
-  flex: flex-wrap;
   border: solid black;
-  border-radius: 25px;
-  margin-bottom: 5px;
-  background-color: beige;
-  width: 70%;
+  border-width: 5px;
+  margin-bottom: 25px;
+  background-image: linear-gradient(to bottom right, purple, pink, white);
+  border-radius: 2px;
+  width: 100%;
   height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.logoName {
+  border: solid black;
+  border-top: 2px;
+  border-right: 2px;
+  border-left: 2px;
+}
 .logo {
-  width: 20%;
-  height: 20%;
+  padding: 8px;
+  width: 25%;
+  height: 25%;
 }
 h2 {
   color: black;
-}
+  text-decoration: underline;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 30px;
+  }
 h5 {
   color: black;
+  font-size: 15px; 
 }
 h3 {
   transition: 0.5s ease;
@@ -94,12 +105,12 @@ h3 {
   border-radius: 5px;
   padding: 16px 32px;
 }
+.imageContainer:hover h3 {
+  opacity: 1;
+}
 .imageContainer {
   position: relative;
-  width: 50%;
-}
-.imageContainer:hover .venue {
-  opacity: 0.3;
+  width: 100%;
 }
 .venue {
   opacity: 1;
@@ -107,12 +118,11 @@ h3 {
   height: auto;
   transition: 0.5s ease;
   backface-visibility: hidden;
-  border-radius: 25px;
+  }
+.imageContainer:hover .venue {
+  opacity: 0.3;
 }
-.imageContainer:hover h3 {
-  opacity: 1;
-}
-subtitle {
-  color: black;
+button {
+  margin-bottom: 10px;
 }
 </style>
