@@ -1,12 +1,22 @@
 <template>
   <div class="hello">
-    <h1>Footy Scores</h1>
-    <button @click="getScores">Get Scores</button>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#cats">Cats</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Football</a>
+        <div class="dropdown-content">
+          <a @click="getScores">Premier League Teams</a>
+          <a href="#">Championship Teams</a>
+          <a href="#">Division One Teams</a>
+        </div>
+      </li>
+    </ul>
     <div class="teamcard" v-for="team in teams" :key="team.team.id">
       <div class="logoName">
         <img class="logo" :src="team.team.logo" />
         <h2>{{ team.team.name }}</h2>
-        <h5>Founded - {{ team.team.founded }} </h5>
+        <h5>Founded - {{ team.team.founded }}</h5>
       </div>
       <div class="imageContainer">
         <img class="venue" :src="team.venue.image" />
@@ -84,12 +94,13 @@ export default {
 h2 {
   color: black;
   text-decoration: underline;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 30px;
-  }
+}
 h5 {
   color: black;
-  font-size: 15px; 
+  font-size: 15px;
 }
 h3 {
   transition: 0.5s ease;
@@ -118,7 +129,7 @@ h3 {
   height: auto;
   transition: 0.5s ease;
   backface-visibility: hidden;
-  }
+}
 .imageContainer:hover .venue {
   opacity: 0.3;
 }
