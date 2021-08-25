@@ -1,17 +1,5 @@
 <template>
   <div class="hello">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#cats">Cats</a></li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Football</a>
-        <div class="dropdown-content">
-          <a @click="getScores">Premier League Teams</a>
-          <a href="#">Championship Teams</a>
-          <a href="#">Division One Teams</a>
-        </div>
-      </li>
-    </ul>
     <div class="teamcard" v-for="team in teams" :key="team.team.id">
       <div class="logoName">
         <img class="logo" :src="team.team.logo" />

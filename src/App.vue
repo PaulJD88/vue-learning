@@ -1,6 +1,18 @@
 <template>
   <div id="app">
-   <FootyScores />
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#cats">Cats</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Football</a>
+        <div class="dropdown-content">
+          <a @click="getScores">Premier League Teams</a>
+          <a href="#">Championship Teams</a>
+          <a href="#">Division One Teams</a>
+        </div>
+      </li>
+    </ul>
+    <FootyScores />
   </div>
 </template>
 
