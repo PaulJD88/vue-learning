@@ -2,10 +2,10 @@
   <div id="app">
     <div>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#cats">Cats</a></li>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/cats">Cat Pictures</router-link></li>
         <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Football</a>
+          <a class="dropbtn">Football</a>
           <div class="dropdown-content">
             <router-link to="/prem-league">Premier League Teams</router-link>
             <router-link to="/about">About</router-link>
@@ -21,11 +21,13 @@
 
 <style>
 ul {
+  display: flex;
+  align-content: space-between;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: black;
 }
 
 li {

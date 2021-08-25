@@ -1,17 +1,12 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h3 v-if="subtitle">- {{ subtitle }} -</h3>
+    <h1>Welcome to my page</h1>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String,
-    subtitle: String
-  }
 }
 </script>
 
