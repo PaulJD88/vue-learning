@@ -1,31 +1,23 @@
 <template>
   <div id="app">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#cats">Cats</a></li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Football</a>
-        <div class="dropdown-content">
-          <a @click="getScores">Premier League Teams</a>
-          <a href="#">Championship Teams</a>
-          <a href="#">Division One Teams</a>
-        </div>
-      </li>
-    </ul>
-    <FootyScores />
+    <div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#cats">Cats</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Football</a>
+          <div class="dropdown-content">
+            <router-link to="/prem-league">Premier League Teams</router-link>
+            <router-link to="/about">About</router-link>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div>
+    <router-view />
+    </div>
   </div>
 </template>
-
-<script>
-import FootyScores from "./components/FootyScores.vue";
-
-export default {
-  name: "App",
-  components: {
-    FootyScores,
-  },
-};
-</script>
 
 <style>
 ul {
@@ -83,7 +75,7 @@ li.dropdown {
   display: block;
 }
 #app {
-  display: flex;
+  /* display: flex; */
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

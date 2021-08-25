@@ -52,6 +52,9 @@ export default {
         });
     },
   },
+  mounted: function () {
+    this.getScores()
+  }
 };
 </script>
 
