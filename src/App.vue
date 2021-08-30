@@ -8,13 +8,13 @@
           <a class="dropbtn">Football</a>
           <div class="dropdown-content">
             <router-link to="/prem-league">Premier League Teams</router-link>
-            <router-link to="/about">About</router-link>
+            <router-link to="/team-stats">Team Statistics</router-link>
           </div>
         </li>
       </ul>
     </div>
     <div>
-    <router-view />
+      <router-view />
     </div>
   </div>
 </template>
@@ -27,7 +27,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: black;
+  background-color: #8c8c8c;
 }
 
 li {
@@ -45,7 +45,7 @@ li a,
 
 li a:hover,
 .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #a64f03;
 }
 
 li.dropdown {
@@ -77,13 +77,17 @@ li.dropdown {
   display: block;
 }
 #app {
-  /* display: flex; */
+  background-image: linear-gradient(
+    to bottom right,
+    #02732a,
+    white,
+    #a2a633,
+    white
+  );
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  justify-content: center;
   color: #2c3e50;
-  width: 100%;
 }
 </style>

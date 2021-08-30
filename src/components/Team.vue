@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-   {{team}}
+  <p> {{team}} </p>
   </div>
 </template>
 

@@ -11,12 +11,20 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/prem-league',
+    name: 'Premier League',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "footy" */ '../components/PremierLeague.vue')
+  },
+  {
+    path: '/team-stats',
+    name: 'Team Statistics',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "footy" */ '../components/Team.vue')
   },
   {
     path: '/cats',
@@ -25,14 +33,6 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../components/ListImages.vue')
-  },
-  {
-    path: '/prem-league',
-    name: 'Premier League',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "footy" */ '../components/FootyScores.vue')
   }
 ]
 

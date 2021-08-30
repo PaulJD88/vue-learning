@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: "FootyScores",
+  name: "PremierLeague",
   data() {
     return {
       teams: [],
@@ -53,22 +53,38 @@ export default {
     },
   },
   mounted: function () {
-    this.getScores()
-  }
+    this.getScores();
+  },
 };
 </script>
 
 <style scoped>
-.teamcard {
+* {
+  box-sizing: border-box;
+}
+.hello {
+  flex-wrap: wrap;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: auto;
+  height: 100%;
+  padding: 50px 50px 50px 50px;
+  margin: 10px;
+}
+@media (max-width: 800px) {
+  .hello {
+    flex-direction: column;
+  }
+}
+.teamcard {
   border: solid black;
-  border-width: 5px;
-  margin-bottom: 25px;
-  background-image: linear-gradient(to bottom right, purple, pink, white);
-  border-radius: 2px;
-  width: 100%;
+  margin: 5px 0px 5px 0px;
+  border-width: 4px;
+  background-color: #a64f0383;
+  border-radius: 5px;
+  width: 50%;
   height: auto;
+  padding: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .logoName {
@@ -83,6 +99,8 @@ export default {
   height: 25%;
 }
 h2 {
+  display: flex;
+  justify-content: center;
   color: black;
   text-decoration: underline;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -123,8 +141,5 @@ h3 {
 }
 .imageContainer:hover .venue {
   opacity: 0.3;
-}
-button {
-  margin-bottom: 10px;
 }
 </style>
