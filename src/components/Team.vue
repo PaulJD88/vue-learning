@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     getTeam() {
-      console.log("Getting Scores");
+      console.log("Footy Scores");
       fetch(
         "https://api-football-beta.p.rapidapi.com/teams/statistics?season=2021&team=33&league=39",
         {

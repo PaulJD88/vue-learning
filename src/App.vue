@@ -20,6 +20,9 @@
 </template>
 
 <style>
+body {
+  margin: 0;
+}
 ul {
   display: flex;
   align-content: space-between;

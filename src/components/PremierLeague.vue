@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     getScores() {
-      console.log("Getting Scores");
+      console.log("PremierLeague");
       fetch(
         "https://api-football-beta.p.rapidapi.com/teams?league=39&season=2021",
         {
